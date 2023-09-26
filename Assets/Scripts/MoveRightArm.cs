@@ -7,8 +7,8 @@ public class MoveRightArm
 {
     Rigidbody2D myArm;
     float armPower = 1f;
-    Vector3 arm = new Vector3(0, -2, 0);
-    Vector3 armdown = new Vector3(0, 2, 0);
+    Vector3 arm = new Vector3(0, -1.5f, 0);
+    Vector3 armdown = new Vector3(0, 1.5f, 0);
 
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class MoveRightArm
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.A))
         {
