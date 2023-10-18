@@ -7,7 +7,7 @@ public class MoveBody
 {
     Rigidbody2D myBody;
     float bodyPower = 2f;
-    public bool caster = false; 
+    public bool caster = false;
 
     // Start is called before the first frame update
     void Start()
