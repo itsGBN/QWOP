@@ -14,6 +14,9 @@ public class MoveBubble : MonoBehaviour
     public GameObject body;
     private SpriteRenderer spriteR;
 
+    public AudioSource audioSource;
+    public AudioClip audioclip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +35,13 @@ public class MoveBubble : MonoBehaviour
         if ((spriteR.sprite != spriteTwo) && (Input.GetKeyUp(KeyCode.Space)))
         {
             spriteR.sprite = spriteTwo;
+            audioSource.PlayOneShot(audioclip);
         }
 
         if ((spriteR.sprite == spriteTwo) && (Input.GetKeyDown(KeyCode.Space)))
         {
             spriteR.color = new Color(1f, 1f, 1f, 0f);
+            audioSource.PlayOneShot(audioclip);
         }
 
         if ((playerScript.caster == true))
