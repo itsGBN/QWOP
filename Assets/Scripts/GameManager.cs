@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public GameObject BubbleTransition;
 
+    public AudioSource audioSource;
+    public AudioClip audioclip;
+
     public void Start()
     {
         if (SceneManager.GetSceneByName("Main").isLoaded)
@@ -19,11 +22,13 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         BubbleTransition.SetActive(true);
+        audioSource.PlayOneShot(audioclip);
     }
 
 
     public void LoadMain()
     {
         SceneManager.LoadScene("Main");
+        audioSource.PlayOneShot(audioclip);
     }
 }
